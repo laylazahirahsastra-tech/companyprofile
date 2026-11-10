@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dreamy Bites</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf7f0;
+            color: #40291f;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* NAVBAR */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 4%;
+            border-bottom: 1px solid #e9e1d8;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #c47f78;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #765f53;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c47f78;
+        }
+
+        .talk {
+            border: 1px solid #40291f;
+            padding: 16px 25px;
+            border-radius: 6px;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 90px 7%;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #bd7972;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 65px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #c47f78;
+            font-style: italic;
+        }
+
+        .hero p {
+            color: #806e63;
+            font-size: 17px;
+            line-height: 1.9;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 65px;
+            padding: 70px 7%;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 180px 180px 0 0;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .section-label {
+            color: #c47f78;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-content h2,
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            color: #806e63;
+            line-height: 1.9;
+            margin-bottom: 17px;
+            font-size: 15px;
+        }
+
+        /* VISI MISI */
+        .vision {
+            padding: 85px 7%;
+            background: #f0e7dc;
+            text-align: center;
+        }
+
+        .vision h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 43px;
+            margin-bottom: 45px;
+        }
+
+        .vision-container {
+            display: flex;
+            gap: 30px;
+        }
+
+        .vision-card {
+            flex: 1;
+            background: #fffaf4;
+            padding: 40px 30px;
+            border-radius: 8px;
+        }
+
+        .vision-card h3 {
+            color: #c47f78;
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .vision-card p,
+        .vision-card li {
+            color: #806e63;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .vision-card ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        /* PURPOSE */
+        .purpose {
+            padding: 90px 7%;
+            text-align: center;
+        }
+
+        .purpose h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .purpose > p {
+            color: #806e63;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.9;
+        }
+
+        .purpose-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .purpose-card {
+            padding: 35px 25px;
+            background: #fffaf4;
+            border: 1px solid #eadfd4;
+            border-radius: 8px;
+        }
+
+        .purpose-card .number {
+            font-family: 'Playfair Display', serif;
+            color: #c47f78;
+            font-size: 35px;
+        }
+
+        .purpose-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            margin: 15px 0;
+        }
+
+        .purpose-card p {
+            color: #806e63;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        /* SERVICES */
+        .services {
+            background: #f0e7dc;
+            padding: 85px 7%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #fffaf4;
+            padding: 35px 25px;
+            border-radius: 8px;
+        }
+
+        .service-card h3 {
+            color: #c47f78;
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #806e63;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        /* CTA */
+        .contact {
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #806e63;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .contact a {
+            display: inline-block;
+            text-decoration: none;
+            background: #40291f;
+            color: white;
+            padding: 17px 35px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            background: #c47f78;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e9e1d8;
+            color: #806e63;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            .vision-container {
+                flex-direction: column;
+            }
+
+            .purpose-container,
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2,
+            .section-title,
+            .vision h2,
+            .purpose h2,
+            .services h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">dreamy<span>bites.</span></div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" class="talk">Let's Talk ↗</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="subtitle">GET TO KNOW US</div>
+
+        <h1>
+            A little story<br>
+            about <span>Dreamy Bites.</span>
+        </h1>
+
+        <p>
+            Mengenal lebih dekat Dreamy Bites, perusahaan yang
+            menghadirkan solusi digital kreatif untuk membantu
+            bisnis bakery, cake, dan dessert berkembang di era digital.
+        </p>
+    </section>
+
+    <!-- ABOUT COMPANY -->
+    <section class="about">
+
+        <div class="about-image">
+            <img src="assets/image/soft-batch-chocolate-chip-cookies.png" alt="Dreamy Bites Cookies">
+        </div>
+
+        <div class="about-content">
+            <div class="section-label">01 / WHO WE ARE</div>
+
+            <h2>
+                More than just a digital creative company.
+            </h2>
+
+            <p>
+                Dreamy Bites adalah perusahaan yang bergerak di bidang
+                layanan digital kreatif dengan fokus membantu bisnis
+                bakery, cake, dan dessert membangun identitas serta
+                memperluas jangkauan mereka melalui teknologi digital.
+            </p>
+
+            <p>
+                Kami percaya bahwa setiap bisnis memiliki cerita,
+                keunikan, dan cita rasa tersendiri. Karena itu,
+                kami hadir untuk mengubah ide dan kreativitas menjadi
+                pengalaman digital yang menarik, modern, dan berkesan.
+            </p>
+
+            <p>
+                Melalui website yang estetik, desain yang menarik,
+                dan strategi digital yang tepat, Dreamy Bites ingin
+                membantu setiap brand tampil lebih profesional
+                dan dikenal oleh lebih banyak pelanggan.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- VISION MISSION -->
+    <section class="vision">
+
+        <div class="section-label">02 / OUR DIRECTION</div>
+
+        <h2>Our Vision & Mission</h2>
+
+        <div class="vision-container">
+
+            <div class="vision-card">
+                <h3>Our Vision</h3>
+                <p>
+                    Menjadi perusahaan digital kreatif yang inovatif
+                    dan terpercaya dalam membantu bisnis bakery,
+                    cake, serta dessert berkembang dan bersaing
+                    di dunia digital melalui solusi yang kreatif
+                    dan berkualitas.
+                </p>
+            </div>
+
+            <div class="vision-card">
+                <h3>Our Mission</h3>
+                <ul>
+                    <li>Menciptakan website yang menarik, modern, dan mudah digunakan.</li>
+                    <li>Membantu meningkatkan identitas dan citra merek.</li>
+                    <li>Memberikan solusi digital sesuai kebutuhan pelanggan.</li>
+                    <li>Mengembangkan kreativitas dan inovasi dalam setiap proyek.</li>
+                    <li>Membangun hubungan yang baik dan berkelanjutan dengan klien.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PURPOSE -->
+    <section class="purpose">
+
+        <div class="section-label">03 / OUR PURPOSE</div>
+
+        <h2>Why We Exist</h2>
+
+        <p>
+            Tujuan kami bukan hanya menciptakan tampilan website yang indah,
+            tetapi juga membantu bisnis memiliki kesempatan lebih besar
+            untuk tumbuh, berkembang, dan dikenal oleh masyarakat luas.
+        </p>
+
+        <div class="purpose-container">
+
+            <div class="purpose-card">
+                <div class="number">01</div>
+                <h3>Empowering Brands</h3>
+                <p>
+                    Membantu bisnis kecil maupun besar membangun
+                    identitas merek yang kuat dan profesional.
+                </p>
+            </div>
+
+            <div class="purpose-card">
+                <div class="number">02</div>
+                <h3>Digital Innovation</h3>
+                <p>
+                    Menghadirkan inovasi digital yang kreatif
+                    untuk memberikan pengalaman terbaik bagi pelanggan.
+                </p>
+            </div>
+
+            <div class="purpose-card">
+                <div class="number">03</div>
+                <h3>Growing Together</h3>
+                <p>
+                    Mendukung perkembangan bisnis melalui kerja sama,
+                    kreativitas, dan solusi digital yang tepat.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+
+        <div class="section-label">04 / WHAT WE DO</div>
+
+        <h2>What We Bring to the Table</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <h3>Website Development</h3>
+                <p>
+                    Membuat website profesional, responsif,
+                    dan menarik untuk memperkenalkan produk
+                    serta layanan bisnis.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Creative Design</h3>
+                <p>
+                    Mengembangkan desain visual yang estetik
+                    dan sesuai dengan karakter serta identitas
+                    setiap brand.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Digital Branding</h3>
+                <p>
+                    Membantu membangun citra merek agar lebih
+                    mudah dikenali, diingat, dan dipercaya
+                    oleh pelanggan.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+
+        <div class="section-label">05 / LET'S CREATE SOMETHING SWEET</div>
+
+        <h2>Let's grow something beautiful together.</h2>
+
+        <p>
+            Setiap bisnis memiliki potensi untuk menjadi luar biasa.
+            Mari wujudkan ide dan kembangkan bisnis Anda bersama Dreamy Bites.
+        </p>
+
+        <a href="contact.html">Let's Talk ↗</a>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Dreamy Bites. All Rights Reserved.
+        <br><br>
+        Sweet ideas, meaningful digital experiences.
+    </footer>
+
+</body>
+</html>
